@@ -26,10 +26,10 @@ function find_marker!(r::Robot)
 end
 
 #задача 18
-function move_until_border_recursive!(r::Robot, side::HorizonSide)
+function move_until_border!(r::Robot, side::HorizonSide)
     if !isborder(r, side)
         move!(r, side)
-        move_until_border_recursive!(r, side)
+        move_until_border!(r, side)
     end
 end
 
